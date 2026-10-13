@@ -242,3 +242,110 @@ img {
     min-height: 44px;
   }
 }
+
+/* ===== Cart Page Design ===== */
+
+body {
+  margin: 0;
+  color: #25312e;
+  background: #f8f7f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-cart,
+body:has(form[action="/cart"]) {
+  background: #f8f7f4;
+}
+
+.custom-cart__container,
+body main {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: #203d3a;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+form[action="/cart"] table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+form[action="/cart"] th {
+  background: #203d3a;
+  color: #fff;
+  padding: 18px;
+  text-align: left;
+}
+
+form[action="/cart"] td {
+  padding: 20px;
+  border-bottom: 1px solid #e7e7e1;
+}
+
+form[action="/cart"] img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+form[action="/cart"] input[type="number"],
+form[action="/cart"] input[name="updates[]"] {
+  width: 75px;
+  padding: 12px;
+  border: 1px solid #d9ded9;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+form[action="/cart"] input[type="submit"] {
+  padding: 14px 25px;
+  margin: 10px 8px 10px 0;
+  background: #2c514e;
+  color: #fff;
+  border: 0;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+form[action="/cart"] input[type="submit"]:hover {
+  background: #203d3a;
+}
+
+form[action="/cart"] a {
+  color: #a34d36;
+  text-decoration: none;
+}
+
+form[action="/cart"] a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 749px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  form[action="/cart"] {
+    overflow-x: auto;
+  }
+
+  form[action="/cart"] table {
+    min-width: 580px;
+  }
+
+  form[action="/cart"] td {
+    padding: 12px;
+  }
+}
