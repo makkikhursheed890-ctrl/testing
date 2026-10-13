@@ -115,3 +115,130 @@ body {
 .shopify-section > .full-width {
   grid-column: 1 / -1;
 }
+
+/* ===== Global Shopify Theme Styling ===== */
+
+:root {
+  --color-primary: #2c514e;
+  --color-primary-dark: #203d3a;
+  --color-accent: #c58b62;
+  --color-background: #f8f7f4;
+  --color-text: #222b2a;
+  --color-border: #e5e5df;
+  --radius-small: 8px;
+  --radius-large: 16px;
+}
+
+/* Global */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* Links */
+a {
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Buttons */
+button,
+.button,
+.shopify-payment-button__button {
+  border-radius: var(--radius-small);
+  transition: all 0.25s ease;
+}
+
+.button,
+button.button {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.button:hover,
+button.button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Product cards */
+.card,
+.card-wrapper {
+  border-radius: var(--radius-large);
+  overflow: hidden;
+}
+
+.card__inner {
+  border-radius: var(--radius-large);
+  overflow: hidden;
+}
+
+.card__heading a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card__media img {
+  transition: transform 0.4s ease;
+}
+
+.card-wrapper:hover .card__media img {
+  transform: scale(1.04);
+}
+
+/* Product prices */
+.price {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  border-radius: var(--radius-small);
+  border-color: var(--color-border);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .button {
+    min-height: 44px;
+  }
+}
